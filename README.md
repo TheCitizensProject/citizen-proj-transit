@@ -34,3 +34,10 @@ Or you can just add a new file with the `.env` name, and paste the `MTA-KEY=your
 ```bash
 python3 app.py
 ```
+
+6. Open your browser and paste the following endpoint:
+
+```
+https://localhost:8000/api/get-station-time/B06
+```
+This will return the train times for Roosevelt Island.
