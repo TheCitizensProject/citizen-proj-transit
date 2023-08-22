@@ -1,6 +1,9 @@
 from .ferrystations import FerryStations
+from .feed_parser import FeedParser
+from .ferrytrips import FerryTrips
 import datetime
 import time
+import pandas as pd
 
 class FerryStationTimes(FerryStations):
   """
@@ -43,7 +46,7 @@ class FerryStationTimes(FerryStations):
     for row in stop_times_df.itertuples():
       if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id']==is_weakend:
         #print(row)
-        toPosix = toPOSIX(row.departure_time)
+        toPosix = self.toPOSIX(row.departure_time)
         if self.is_valid_stop_time(toPosix):
           dept_time = self.to_12Hours(row.departure_time)
           direction = self.trips[row.trip_id]['trip_headsign']
@@ -114,7 +117,7 @@ class FerryStationTimes(FerryStations):
     return unix_timestamp
 
   def is_valid_stop_time(self, str_posix_time):
-    time_diff = get_time_difference(str_posix_time)
+    time_diff = self.get_time_difference(str_posix_time)
     return 0 < time_diff < self.TIME_THRESHOLD
 
   @staticmethod

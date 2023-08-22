@@ -1,5 +1,6 @@
 from flask import Flask, jsonify
 from mta_api.stationtimes import StationTimes
+from mta_api.ferrystationtimes import FerryStationTimes
 from mta_api.stations import Stations
 import json
 from flask_cors import CORS
@@ -27,6 +28,11 @@ def get_station_time_by_id(stop_id):
 @app.route("/api/get-station-details")
 def get_station_details():
     stations = Stations().stations
+    return jsonify(stations)
+
+@app.route("/api/get-ferry-time")
+def get_ferry_times():
+    stations = FerryStationTimes().get_ferry_time_by_station()
     return jsonify(stations)
 
 if __name__ == "__main__":
