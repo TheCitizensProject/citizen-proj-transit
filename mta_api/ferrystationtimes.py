@@ -4,6 +4,7 @@ from .ferrytrips import FerryTrips
 import datetime
 import time
 import pandas as pd
+import pytz
 
 class FerryStationTimes(FerryStations):
   """
@@ -17,7 +18,7 @@ class FerryStationTimes(FerryStations):
     self.trips = FerryTrips().get_trips()
     
 
-  TIME_THRESHOLD = 60*30 #1m*30 = 30m
+  TIME_THRESHOLD = 60*60 #1m*30 = 30m
   ROOSEVELTISLAND_STOP_ID = 25
 
   def get_stations(self):
@@ -39,7 +40,7 @@ class FerryStationTimes(FerryStations):
     """
     Should return an array [(Ferry Bound, mins away),(...),...]
     """
-    stop_times_df = pd.read_csv('stop_times.txt')
+    stop_times_df = pd.read_csv('metadata/ferry_data/google_transit/stop_times.txt')
     is_weakend = self.isWeekend()
     scheduled = []
 

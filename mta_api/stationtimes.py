@@ -9,7 +9,7 @@ class StationTimes(Stations):
   """
   def __init__(self):
     super().__init__()
-    self.feed = FeedParser().feed
+    self.feed = FeedParser().mta_feed
     self.stations =  self.get_stations()
 
   #Set a time threshold in seconds for how far into future we'll display incoming trains.

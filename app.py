@@ -4,6 +4,7 @@ from mta_api.ferrystationtimes import FerryStationTimes
 from mta_api.stations import Stations
 import json
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -32,8 +33,9 @@ def get_station_details():
 
 @app.route("/api/get-ferry-time")
 def get_ferry_times():
+
     stations = FerryStationTimes().get_ferry_time_by_station()
-    return jsonify(stations)
+    return json.dumps(stations)
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8000, debug=True)

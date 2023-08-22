@@ -1,7 +1,7 @@
 import pandas as pd
 
 class FerryTrips:
-  def __init__(self, csv_path='./trips.txt'):
+  def __init__(self, csv_path='metadata/ferry_data/google_transit/trips.txt'):
     self.csv_path = csv_path
     self.df_trips = self.make_df()
   

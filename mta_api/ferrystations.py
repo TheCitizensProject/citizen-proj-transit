@@ -2,7 +2,7 @@ from .stations import Stations
 
 class FerryStations(Stations):
   def __init__(self):
-    super().__init__(csv_path="./stops.txt")
+    super().__init__(csv_path="metadata/ferry_data/google_transit/stops.txt")
     self.df_stations = self.make_df()
 
   def get_stations(self):
