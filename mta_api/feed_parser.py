@@ -21,13 +21,15 @@ class FeedParser:
     self.mta_endpoints = {
       'BDFM': 'https://api-endpoint.mta.info/Dataservice/mtagtfsfeeds/nyct%2Fgtfs-bdfm',
     }
+    self.ferry_endpoint = "http://nycferry.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/tripupdate"
     self.headers = {
       "x-api-key": os.getenv("MTA-KEY")
     }
-    self.feed = self.get_feed()
+    self.mta_feed = self.get_mta_feed()
+    self.ferry_feed = self.get_ferry_feed()
 
 
-  def get_feed(self):
+  def get_mta_feed(self):
     feeds = []
     for endpoint in self.mta_endpoints:
       url = self.mta_endpoints[endpoint]
@@ -37,6 +39,15 @@ class FeedParser:
       feeds.extend(MessageToDict(feed)['entity'])
     #feeds_ = [j for sub in feeds for j in sub]
     return feeds
+  
+  def get_ferry_feed(self):
+    url = self.ferry_endpoint
+    feed = gtfs_realtime_pb2.FeedMessage()
+    response = requests.get(url)
+    feed.ParseFromString(response.content)
+    feed = MessageToDict(feed)['entity']
+
+    return feed
 
 
 
