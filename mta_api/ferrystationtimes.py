@@ -69,9 +69,6 @@ class FerryStationTimes(FerryStations):
               #map to direction from trips.txt
               direction = self.trips[int(gtfs_trip_id)]['trip_headsign']
               departure = stopTimes['departure']['time']
-              """temp = {}
-              temp['direction'] = direction
-              temp['departure'] = departure"""
               departure_time_relative = self.get_time_difference(departure) // 60
               stop_times_rt.append((direction, departure_time_relative))
     """

@@ -35,6 +35,7 @@ def get_station_details():
 def get_ferry_times():
 
     stations = FerryStationTimes().get_ferry_time_by_station()
+    #print(stations)
     return json.dumps(stations)
 
 if __name__ == "__main__":
