@@ -35,8 +35,12 @@ def get_station_details():
 def get_ferry_times():
 
     stations = FerryStationTimes().get_ferry_time_by_station()
+    stop = stations[25]
     #print(stations)
-    return json.dumps(stations)
+    return jsonify({
+        'statusCode': 200,
+        'data': stop
+    })
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8000, debug=True)

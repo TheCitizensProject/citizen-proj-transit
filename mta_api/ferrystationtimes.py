@@ -31,7 +31,8 @@ class FerryStationTimes(FerryStations):
             "geo-loc": {
               "latitude": row.stop_lat,
               "longitude": row.stop_lon,
-            }
+            },
+            "ferry_times": []
         }
       #stations.append(station_data)
     return stations
@@ -78,9 +79,9 @@ class FerryStationTimes(FerryStations):
       - 1=weekday, 2=weekend
     2. Based on service id, extract the time from stop_times.txt, and show 2 hours inbound.
     """
-    self.stations['ferry_times'] = stop_times_rt
+    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
     scheduled = self.get_static_stop_times()
-    self.stations['ferry_times'].extend(scheduled)
+    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled)
 
     return self.stations
 
