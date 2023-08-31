@@ -1,0 +1,15 @@
+﻿service_id,date,exception_type
+car2_Mon-Fri_Rush,20211225,1
+car2_Mon-Fri_Rush,20220101,1
+Octagon,20220530,2
+Octagon,20220704,2
+Octagon,20220905,2
+Octagon,20221124,2
+car2_Mon-Fri_Rush,20221225,1
+car2_Mon-Fri_Rush,20230101,1
+Octagon,20230529,2
+Octagon,20230704,2
+Octagon,20230904,2
+Octagon,20231123,2
+Octagon,20231225,2
+Octagon,20240101,2
