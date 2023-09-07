@@ -2,7 +2,7 @@ from .feed_parser import FeedParser
 from .stations import Stations
 import time
 
-class StationTimes(Stations):
+class StationTimes:
   """
   StationTimes inherits from the Stations Class and inserts train times in the north and south
   bound platforms from parsed GTFS feed.
@@ -10,6 +10,7 @@ class StationTimes(Stations):
   def __init__(self):
     super().__init__()
     self.feed = FeedParser().mta_feed
+    self.df_stations = Stations().make_df()
     self.stations =  self.get_stations()
 
   #Set a time threshold in seconds for how far into future we'll display incoming trains.
