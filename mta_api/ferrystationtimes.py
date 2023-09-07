@@ -12,7 +12,6 @@ class FerryStationTimes:
   as dynamic as the MTA Feed.
   """
   def __init__(self):
-    super().__init__()
     self.feed = FeedParser().ferry_feed
     self.df_stations = FerryStations().make_df()
     self.stations =  self.get_stations()

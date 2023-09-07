@@ -8,7 +8,6 @@ class StationTimes:
   bound platforms from parsed GTFS feed.
   """
   def __init__(self):
-    super().__init__()
     self.feed = FeedParser().mta_feed
     self.df_stations = Stations().make_df()
     self.stations =  self.get_stations()

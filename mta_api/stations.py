@@ -12,7 +12,7 @@ class Stations:
   def __init__(self, csv_path="./metadata/Stations.csv"):
     self.csv_path = csv_path
     self.df_stations = self.make_df()
-    self.stations = self.get_stations()
+    #self.stations = self.get_stations()
 
   def make_df(self):
     df = pd.read_csv(self.csv_path)

@@ -4,13 +4,13 @@ from .tramstations import TramStations
 import pytz
 import pandas as pd
 
-class TramStationTimes(TramStations):
+class TramStationTimes:
   """
   This class will particularly deal with Roosevelt Island tram system. This is not
   as dynamic as the MTA Feed.
   """
   def __init__(self):
-    super().__init__()
+    self.df_stations = TramStations().make_df()
     self.stations =  self.get_stations()
 
 
