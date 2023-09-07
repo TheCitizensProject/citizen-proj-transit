@@ -92,6 +92,9 @@ class TramStationTimes:
 
   @staticmethod
   def toPOSIX(input_time):
+    """
+    Utility function to convert the static 24hour time to UNIX time from stop_times.txt file.
+    """
     # Your input time and date
     desired_timezone = "America/New_York"
     # Get the current date
@@ -116,6 +119,9 @@ class TramStationTimes:
 
   @staticmethod
   def to_12Hours(input_time):
+    """
+    Utility function to convert static 24hour time to 12hour time from stop_times.txt file.
+    """
     time_obj = datetime.datetime.strptime(input_time, '%H:%M:%S')
     formatted_time = time_obj.strftime('%I:%M:%S %p')
     return formatted_time

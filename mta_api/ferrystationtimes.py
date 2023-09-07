@@ -39,7 +39,15 @@ class FerryStationTimes:
   
   def get_static_stop_times(self):
     """
-    Should return an array [(Ferry Bound, mins away),(...),...]
+    This method is responsible for parsing the static ferry feed provided by
+    stop_times.txt. We only query for ROOSEVELTISLAND_STOP_ID station or whatever stop
+    id is placed there.
+
+    The trips object from the trips.txt file provides us service_id [1 or 2] which enables
+    us to identify whether the line we are parsing is a weekend service or not. Depending
+    on whether today is a weekend or weekday, we select the appropriate rows for display.
+    
+    Returns an array [(Ferry Bound, mins away),(...),...]
     """
     stop_times_df = pd.read_csv('metadata/ferry_data/google_transit/stop_times.txt')
     is_weakend = self.isWeekend()
@@ -57,7 +65,23 @@ class FerryStationTimes:
 
   def get_ferry_time_by_station(self):
     """
-    for every entity, check for tripUpdates and stopTimeUpdates
+    This is the main method where we parse from the RT GTFS->JSON data, to display
+    ferry times for every station. In particular, this method will return stop_times
+    for station indicated within self.ROOSEVELTISLAND_STOP_ID, which is 25.
+
+    There are two feeds we are getting data from, which sets parsing Ferry times as 
+    different compared to Train times: 1) We are using the RT feed to get immediate
+    ferries departing the station, 2) we are using the static feed to get the subsequent
+    ferries that are scheduled within a TIME_THRESHOLD. We need to use the static feed
+    because, unlike in Train feed, the RT feed for ferries do not show incoming ferries
+    that are within a 30min-1hour window.
+
+    This algorithm is quite similar to the StationTimes algorithm to parse data, such that
+    we look for stopTimeUpdates in tripUpdate. However, since the data returned from RT is different
+    from the Train RT feed, we need to adjust how we extract the direction. To extract the
+    direction of where the ferry is headed, we leverage the trips.txt file from the static feed
+    and map trip_id to the corresponding trip_haedsign. Each trip_id is associated with a particular
+    direction represented as trip_headsign.
     """
     stop_times_rt = []
     for entity in self.feed:
@@ -72,6 +96,8 @@ class FerryStationTimes:
               departure = stopTimes['departure']['time']
               departure_time_relative = self.get_time_difference(departure) // 60
               stop_times_rt.append((direction, departure_time_relative))
+    
+    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
     """
     So when real time feed is empty, we want to query the stop_times dataframe to get the next scheduled ferry.
     To do this, we use the stop_times.txt, and map:
@@ -79,7 +105,6 @@ class FerryStationTimes:
       - 1=weekday, 2=weekend
     2. Based on service id, extract the time from stop_times.txt, and show 2 hours inbound.
     """
-    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
     scheduled = self.get_static_stop_times()
     self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled)
 
@@ -93,6 +118,13 @@ class FerryStationTimes:
   
   @staticmethod
   def isWeekend():
+    """
+    Utility function to check whether today is a weekday or the weekend.
+    Returns:
+        2: if today is a weekend. 
+        1: if today is not a weekend.
+    Values 1 and 2 corresponds the static trips.txt file.
+    """
     # Get the current date
     current_date = datetime.date.today()
     # Check if the day of the week is Saturday (5) or Sunday (6)
@@ -102,6 +134,9 @@ class FerryStationTimes:
   
   @staticmethod
   def toPOSIX(input_time):
+    """
+    Utility function to convert the static 24hour time to UNIX time from stop_times.txt file.
+    """
     # Your input time and date
     desired_timezone = "America/New_York"
     # Get the current date
@@ -121,6 +156,9 @@ class FerryStationTimes:
 
   @staticmethod
   def to_12Hours(input_time):
+    """
+    Utility function to convert static 24hour time to 12hour time from stop_times.txt file.
+    """
     time_obj = datetime.datetime.strptime(input_time, '%H:%M:%S')
     formatted_time = time_obj.strftime('%I:%M:%S %p')
     return formatted_time
