@@ -1,6 +1,6 @@
 import datetime
 import time
-from tramstations import TramStations
+from .tramstations import TramStations
 import pytz
 import pandas as pd
 

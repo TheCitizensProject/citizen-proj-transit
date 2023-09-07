@@ -1,4 +1,4 @@
-from stations import Stations
+from .stations import Stations
 
 class TramStations(Stations):
   def __init__(self):

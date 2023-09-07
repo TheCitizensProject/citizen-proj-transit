@@ -37,7 +37,9 @@ def get_ferry_times():
 
     stations = FerryStationTimes().get_ferry_time_by_station()
     stop = stations[25]
-    #print(stations)
+    #sort the times
+    stop['ferry_times'].sort(key=(lambda x: x[1]))
+
     return jsonify({
         'statusCode': 200,
         'data': stop
@@ -48,7 +50,9 @@ def get_tram_times():
 
     stations = TramStationTimes().get_tram_time_by_station()
     stop = stations[1]
-    #print(stations)
+    #sort the times
+    stop['tram_times'].sort(key=(lambda x: x[1]))
+
     return jsonify({
         'statusCode': 200,
         'data': stop
