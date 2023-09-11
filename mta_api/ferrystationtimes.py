@@ -95,7 +95,7 @@ class FerryStationTimes:
               direction = self.trips[int(gtfs_trip_id)]['trip_headsign']
               departure = stopTimes['departure']['time']
               departure_time_relative = self.get_time_difference(departure) // 60
-              stop_times_rt.append((direction, departure_time_relative))
+              stop_times_rt.append((direction, str(departure_time_relative)))
     
     self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
     """
