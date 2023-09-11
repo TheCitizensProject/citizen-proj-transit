@@ -27,6 +27,28 @@ def get_station_time_by_id(stop_id):
         'statusCode': 200,
         'data': stop
     })
+
+@app.route("/api/get-station-time-unified/<stop_id>")
+def get_station_time_by_id_unified(stop_id):
+    stations = StationTimes().get_train_time_by_station()
+    stop = stations[stop_id]
+    nBound = stop['north_bound_trains']
+    for train_time in nBound:
+        train_time.append(stop['north_bound_label'])
+    sBound = stop['south_bound_trains']
+    for train_time in sBound:
+        train_time.append(stop['south_bound_label'])
+    #unify north and south bound trains
+    both_directions = nBound+sBound
+    #print(both_directions)
+    both_directions.sort(key=(lambda x: x[1]))
+    stop['both_directions'] = both_directions
+
+    return jsonify({
+        'statusCode': 200,
+        'data': stop
+    })
+
 @app.route("/api/get-station-details")
 def get_station_details():
     stations = Stations().stations
