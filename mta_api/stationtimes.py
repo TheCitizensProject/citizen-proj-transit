@@ -78,7 +78,7 @@ class StationTimes:
               posix_time = stop_time_update['arrival']['time']
               time_diff = self.get_time_difference(posix_time)
               #train_data = {'train':train,'time':round(time_diff/60)}
-              train_data = (train, round(time_diff/60))
+              train_data = [train, round(time_diff/60)]
               if direction == 'N':
                 self.stations[search_term]['north_bound_trains'].append(train_data)
               elif direction == 'S':
