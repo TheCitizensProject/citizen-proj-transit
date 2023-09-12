@@ -56,16 +56,22 @@ class TramStationTimes:
         if self.is_valid_stop_time(toPosix):
           
           if "car1_Standard" in row.trip_id:
-            dept_time = self.to_12Hours(row.departure_time)
+            #change from 12hr time to time difference
+            #dept_time = self.to_12Hours(row.departure_time)
+            dept_time = self.get_time_difference(toPosix)//60
             direction = row.stop_headsign
             scheduled.append((direction, dept_time))
           if "car2_Mon-Fri_Rush" in row.trip_id and (current_date.weekday != 5 or current_date.weekday != 6):
-            dept_time = self.to_12Hours(row.departure_time)
+            #change from 12hr time to time difference
+            #dept_time = self.to_12Hours(row.departure_time)
+            dept_time = self.get_time_difference(toPosix)//60
             direction = row.stop_headsign
             scheduled.append((direction, dept_time))
           if "car1_Fri-Sat_Extension" in row.trip_id and (current_date.weekday == 4 or current_date.weekday == 5):
             #print("car1_Fri-Sat_Extension")
-            dept_time = self.to_12Hours(row.departure_time)
+            #change from 12hr time to time difference
+            #dept_time = self.to_12Hours(row.departure_time)
+            dept_time = self.get_time_difference(toPosix)//60
             direction = row.stop_headsign
             scheduled.append((direction, dept_time))
           elif ("Northbound_Standard" in row.trip_id or "Northbound_Weekend_Extension" in row.trip_id

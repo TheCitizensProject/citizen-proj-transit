@@ -58,7 +58,9 @@ class FerryStationTimes:
         #print(row)
         toPosix = self.toPOSIX(row.departure_time)
         if self.is_valid_stop_time(toPosix):
-          dept_time = self.to_12Hours(row.departure_time)
+          #change from 12hr time to time difference
+          #dept_time = self.to_12Hours(row.departure_time)
+          dept_time = self.get_time_difference(toPosix)//60
           direction = self.trips[row.trip_id]['trip_headsign']
           scheduled.append((direction, dept_time))
     return scheduled
@@ -95,7 +97,7 @@ class FerryStationTimes:
               direction = self.trips[int(gtfs_trip_id)]['trip_headsign']
               departure = stopTimes['departure']['time']
               departure_time_relative = self.get_time_difference(departure) // 60
-              stop_times_rt.append((direction, str(departure_time_relative)))
+              stop_times_rt.append((direction, departure_time_relative))
     
     self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
     """
