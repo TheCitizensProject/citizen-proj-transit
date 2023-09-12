@@ -18,7 +18,7 @@ class FerryStationTimes:
     self.trips = FerryTrips().get_trips()
     
 
-  TIME_THRESHOLD = 60*60 #1m*30 = 30m
+  TIME_THRESHOLD = 60*30 #1m*30 = 30m
   ROOSEVELTISLAND_STOP_ID = 25
 
   def get_stations(self):

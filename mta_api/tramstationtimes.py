@@ -14,7 +14,7 @@ class TramStationTimes:
     self.stations =  self.get_stations()
 
 
-  TIME_THRESHOLD = 60*60 #1m*30 = 30m
+  TIME_THRESHOLD = 60*30 #1m*30 = 30m
   ROOSEVELTISLAND_STOP_ID = 1
 
   def get_stations(self):
