@@ -1,4 +1,5 @@
 venv
 .env
 test.py
+__pycache__
 mta_api/__pycache__
