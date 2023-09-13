@@ -1,5 +1,11 @@
 # The Citizen Project Transit API
 
+This project aims to allow Roosevelt Island residents to access transit times to and from the Island, and covers
+the subway, tram and ferry. Although the API is specific to the island, you can clone the repository, and modify parameters
+to extract train times for any of the subway stations within NYC.
+
+## [Live Demo](https://d33owvrgueloug.cloudfront.net/)
+
 ## Getting Started
 
 1. Clone the repository
