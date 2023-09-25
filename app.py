@@ -62,6 +62,7 @@ def get_ferry_times():
     #sort the times
     stop['ferry_times'].sort(key=(lambda x: x[-1]))
 
+    removeUntil = -1 #init removeUntil
     #don't show negative departures
     for i in range(len(stop['ferry_times'])):
         if stop['ferry_times'][i][-1] < 0:
