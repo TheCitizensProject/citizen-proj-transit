@@ -10,6 +10,9 @@ class FerryStationTimes:
   """
   This class will particularly deal with Roosevelt Island ferry. This is not
   as dynamic as the MTA Feed.
+
+  Update Sept 25th:
+  - To fix implementation of ferry
   """
   def __init__(self):
     self.feed = FeedParser().ferry_feed
