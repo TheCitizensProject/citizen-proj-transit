@@ -60,7 +60,15 @@ def get_ferry_times():
     stations = FerryStationTimes().get_ferry_time_by_station()
     stop = stations[25]
     #sort the times
-    stop['ferry_times'].sort(key=(lambda x: x[1]))
+    stop['ferry_times'].sort(key=(lambda x: x[-1]))
+
+    #don't show negative departures
+    for i in range(len(stop['ferry_times'])):
+        if stop['ferry_times'][i][-1] < 0:
+            removeUntil = i
+    
+    stop['ferry_times'] = stop['ferry_times'][removeUntil+1:]
+
 
     return jsonify({
         'statusCode': 200,
