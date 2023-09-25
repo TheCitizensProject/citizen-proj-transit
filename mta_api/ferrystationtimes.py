@@ -182,7 +182,9 @@ class FerryStationTimes:
 
   def is_valid_stop_time(self, str_posix_time):
     time_diff = self.get_time_difference(str_posix_time)
-    return 0 < time_diff < self.TIME_THRESHOLD
+    #-15*60=-900: Go lookup schedule 15min behind to account for delays.
+    #assume that a ferry could be delayed by a max of 15mins.
+    return -900 < time_diff < self.TIME_THRESHOLD
 
   @staticmethod
   def to_12Hours(input_time):
