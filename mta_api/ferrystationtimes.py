@@ -19,9 +19,11 @@ class FerryStationTimes:
     self.df_stations = FerryStations().make_df()
     self.stations =  self.get_stations()
     self.trips = FerryTrips().get_trips()
+    self.stop_times_df = pd.read_csv('metadata/ferry_data/google_transit/stop_times.txt')
+    self.static_times = self.get_static_timetable()
     
 
-  TIME_THRESHOLD = 60*30 #1m*30 = 30m
+  TIME_THRESHOLD = 60*60 #1m*30 = 30m
   ROOSEVELTISLAND_STOP_ID = 25
 
   def get_stations(self):
@@ -40,7 +42,21 @@ class FerryStationTimes:
       #stations.append(station_data)
     return stations
   
-  def get_static_stop_times(self):
+  def get_static_timetable(self):
+    """
+    """
+    stop_times_df = self.stop_times_df
+    static_times = {}
+    for row in stop_times_df.itertuples():
+      key = (row.trip_id, row.stop_id)
+      static_times[key] = {
+          'arrival_time': self.toPOSIX(row.arrival_time),
+          'departure_time': self.toPOSIX(row.departure_time)
+      }
+    
+    return static_times
+  
+  def get_schedule(self):
     """
     This method is responsible for parsing the static ferry feed provided by
     stop_times.txt. We only query for ROOSEVELTISLAND_STOP_ID station or whatever stop
@@ -52,7 +68,7 @@ class FerryStationTimes:
     
     Returns an array [(Ferry Bound, mins away),(...),...]
     """
-    stop_times_df = pd.read_csv('metadata/ferry_data/google_transit/stop_times.txt')
+    stop_times_df = self.stop_times_df
     is_weakend = self.isWeekend()
     scheduled = []
 
@@ -65,7 +81,7 @@ class FerryStationTimes:
           #dept_time = self.to_12Hours(row.departure_time)
           dept_time = self.get_time_difference(toPosix)//60
           direction = self.trips[row.trip_id]['trip_headsign']
-          scheduled.append((direction, dept_time))
+          scheduled.append([row.trip_id,direction,row.departure_time, dept_time])
     return scheduled
 
   def get_ferry_time_by_station(self):
@@ -73,44 +89,53 @@ class FerryStationTimes:
     This is the main method where we parse from the RT GTFS->JSON data, to display
     ferry times for every station. In particular, this method will return stop_times
     for station indicated within self.ROOSEVELTISLAND_STOP_ID, which is 25.
-
-    There are two feeds we are getting data from, which sets parsing Ferry times as 
-    different compared to Train times: 1) We are using the RT feed to get immediate
-    ferries departing the station, 2) we are using the static feed to get the subsequent
-    ferries that are scheduled within a TIME_THRESHOLD. We need to use the static feed
-    because, unlike in Train feed, the RT feed for ferries do not show incoming ferries
-    that are within a 30min-1hour window.
-
-    This algorithm is quite similar to the StationTimes algorithm to parse data, such that
-    we look for stopTimeUpdates in tripUpdate. However, since the data returned from RT is different
-    from the Train RT feed, we need to adjust how we extract the direction. To extract the
-    direction of where the ferry is headed, we leverage the trips.txt file from the static feed
-    and map trip_id to the corresponding trip_haedsign. Each trip_id is associated with a particular
-    direction represented as trip_headsign.
     """
-    stop_times_rt = []
+    scheduled = self.get_schedule()
+    #make a hashset for efficient search
+    rt_feed = {}
     for entity in self.feed:
-      if 'tripUpdate' in entity.keys() and "stopTimeUpdate" in entity['tripUpdate'].keys():
-        stop_time_updates = entity['tripUpdate']['stopTimeUpdate']
-        for stopTimes in stop_time_updates:
-          if 'departure' in stopTimes:
-            if stopTimes['stopId']==str(self.ROOSEVELTISLAND_STOP_ID):
-              gtfs_trip_id = entity['tripUpdate']['trip']['tripId']
-              #map to direction from trips.txt
-              direction = self.trips[int(gtfs_trip_id)]['trip_headsign']
-              departure = stopTimes['departure']['time']
-              departure_time_relative = self.get_time_difference(departure) // 60
-              stop_times_rt.append((direction, departure_time_relative))
+      rt_feed[entity['id']] = entity
     
-    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(stop_times_rt)
-    """
-    So when real time feed is empty, we want to query the stop_times dataframe to get the next scheduled ferry.
-    To do this, we use the stop_times.txt, and map:
-    1. map stop_times.txt trip_id to trips.txt trip_id, and check whether service id is 1 or 2
-      - 1=weekday, 2=weekend
-    2. Based on service id, extract the time from stop_times.txt, and show 2 hours inbound.
-    """
-    scheduled = self.get_static_stop_times()
+    #get differences
+    for schedule in scheduled:
+      trip_id = str(schedule[0])
+      entity = rt_feed[trip_id]
+      if 'tripUpdate' in entity.keys():
+        """
+        Instead of looping through every stop time update, just take the last the
+        last index for comparison. There are 2 cases:
+        1. The last index is that of the target station, aka Roosevelt Island.
+        2. The last index is that of a preceeding station
+
+        For both the cases, we need to check:
+        1. whether departure information is there
+        2. if departure info exist:
+          1. calculate the differences
+        3. if departure info not exist:
+          1. calculate differences based on arrival information.
+        """
+        stop_time_update = entity['tripUpdate']['stopTimeUpdate'][-1]
+        key = (int(trip_id), int(stop_time_update['stopId']))
+        static_time = self.static_times[key]
+        delay = 0
+        if 'departure' in stop_time_update.keys():
+          rt_time = round(self.get_time_difference(stop_time_update['departure']['time'])/60)
+          sch_time = round(self.get_time_difference(static_time['departure_time'])/60)
+          if sch_time<rt_time:
+            delay = abs(abs(rt_time)-abs(sch_time))
+          stop_time_update['departure']['rt_time'] = rt_time
+          stop_time_update['departure']['sch_time'] = sch_time
+        else:
+          rt_time = round(self.get_time_difference(stop_time_update['arrival']['time'])/60)
+          sch_time = round(self.get_time_difference(static_time['arrival_time'])/60)
+          if sch_time<rt_time:
+            delay = abs(abs(rt_time)-abs(sch_time))
+          stop_time_update['arrival']['rt_time'] = rt_time
+          stop_time_update['arrival']['sch_time'] = sch_time
+
+        #fix the schedule if delay exists
+        schedule[-1] += delay
+    
     self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled)
 
     return self.stations
