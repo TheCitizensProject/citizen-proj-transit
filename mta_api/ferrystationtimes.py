@@ -79,7 +79,7 @@ class FerryStationTimes:
         if self.is_valid_stop_time(toPosix):
           #change from 12hr time to time difference
           #dept_time = self.to_12Hours(row.departure_time)
-          dept_time = self.get_time_difference(toPosix)//60
+          dept_time = round(self.get_time_difference(toPosix)/60)
           direction = self.trips[row.trip_id]['trip_headsign']
           scheduled.append([row.trip_id,direction,row.departure_time, dept_time])
     return scheduled
