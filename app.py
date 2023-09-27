@@ -31,20 +31,26 @@ def get_station_time_by_id(stop_id):
 @app.route("/api/get-station-time-unified/<stop_id>")
 def get_station_time_by_id_unified(stop_id):
     stations = StationTimes().get_train_time_by_station()
+    toShow = 1 #number of trains to show per direction
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
-    #sort
+    #sort north bound
     nBound.sort(key=(lambda x: x[1]))
-    nBound[0].append(stop['north_bound_label'])
+    #nBound[0].append(stop['north_bound_label'])
+    for i in range(toShow):
+        if i < len(nBound):
+            nBound[i].append(stop['north_bound_label'])
     sBound = stop['south_bound_trains']
-    #sort
+    #sort south bound
     sBound.sort(key=(lambda x: x[1]))
-    sBound[0].append(stop['south_bound_label'])
+    #sBound[0].append(stop['south_bound_label'])
+    for i in range(toShow):
+        if i<len(sBound):
+            sBound[i].append(stop['south_bound_label'])
     #unify north and south bound trains
-    if nBound[0][1] > sBound[0][1]:
-        both_directions = [ [ sBound[0] ]+[ nBound[0] ] ]
-    else:
-        both_directions = [ [ nBound[0] ]+[ sBound[0] ] ]
+    both_directions = nBound[:toShow]+sBound[:toShow]
+    #sort both directions
+    both_directions.sort(key=(lambda x: x[1]))
 
     stop['both_directions'] = both_directions
 
