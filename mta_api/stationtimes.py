@@ -13,7 +13,7 @@ class StationTimes:
     self.stations =  self.get_stations()
 
   #Set a time threshold in seconds for how far into future we'll display incoming trains.
-  MINUTES_IN_FUTURE = 30
+  MINUTES_IN_FUTURE = 80
   TIME_THRESHOLD = 60*MINUTES_IN_FUTURE #Here 60 denotes 60 seconds in a minute
 
   def get_stations(self):
