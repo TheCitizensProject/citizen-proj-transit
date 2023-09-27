@@ -33,15 +33,19 @@ def get_station_time_by_id_unified(stop_id):
     stations = StationTimes().get_train_time_by_station()
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
-    for train_time in nBound:
-        train_time.append(stop['north_bound_label'])
+    #sort
+    nBound.sort(key=(lambda x: x[1]))
+    nBound[0].append(stop['north_bound_label'])
     sBound = stop['south_bound_trains']
-    for train_time in sBound:
-        train_time.append(stop['south_bound_label'])
+    #sort
+    sBound.sort(key=(lambda x: x[1]))
+    sBound[0].append(stop['south_bound_label'])
     #unify north and south bound trains
-    both_directions = nBound+sBound
-    #print(both_directions)
-    both_directions.sort(key=(lambda x: x[1]))
+    if nBound[0][1] > sBound[0][1]:
+        both_directions = [ [ sBound[0] ]+[ nBound[0] ] ]
+    else:
+        both_directions = [ [ nBound[0] ]+[ sBound[0] ] ]
+
     stop['both_directions'] = both_directions
 
     return jsonify({
