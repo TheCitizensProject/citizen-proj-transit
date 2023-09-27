@@ -79,6 +79,9 @@ def get_ferry_times():
             removeUntil = i
     
     stop['ferry_times'] = stop['ferry_times'][removeUntil+1:]
+    #display only 2 ferries
+    toShow = 2
+    stop['ferry_times'] = stop['ferry_times'][:toShow]
 
 
     return jsonify({
@@ -93,6 +96,9 @@ def get_tram_times():
     stop = stations[1]
     #sort the times
     stop['tram_times'].sort(key=(lambda x: x[1]))
+    #display only two trams
+    toShow = 2
+    stop['tram_times'] = stop['tram_times'][:toShow]
 
     return jsonify({
         'statusCode': 200,
