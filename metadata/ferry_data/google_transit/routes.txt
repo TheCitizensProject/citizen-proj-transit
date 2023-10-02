@@ -4,7 +4,6 @@
 "ERS",1,"ERS","Midtown Shuttle",3,00A1E1,FFFFFF
 "GI",1,"GI","Governors Island Shuttle",4,9795A0,FFFFFF
 "RES",1,"RES","Rockaway East",3,00A1E1,FFFFFF
-"RR",1,"RR","Rockaway Rocket",4,FF8672,FFFFFF
 "RW",1,"RW","Rockaway",4,B218AA,FFFFFF
 "RWS",1,"RWS","Rockaway West",3,00A1E1,FFFFFF
 "SB",1,"SB","South Brooklyn",4,FFD100,FFFFFF
