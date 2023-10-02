@@ -96,10 +96,14 @@ class FerryStationTimes:
     rt_feed = {}
     for entity in self.feed:
       rt_feed[entity['id']] = entity
-    print(rt_feed)
+    #print(rt_feed)
     #get differences
+    scheduled_filtered = []
     for schedule in scheduled:
       trip_id = str(schedule[0])
+      if trip_id not in rt_feed.keys():
+        print("Schedule not there", schedule)
+        continue
       entity = rt_feed[trip_id]
       if 'tripUpdate' in entity.keys():
         """
@@ -136,8 +140,9 @@ class FerryStationTimes:
 
         #fix the schedule if delay exists
         schedule[-1] += delay
+        scheduled_filtered.append(schedule)
     
-    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled)
+    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled_filtered)
 
     return self.stations
 
