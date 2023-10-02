@@ -70,10 +70,11 @@ class FerryStationTimes:
     """
     stop_times_df = self.stop_times_df
     is_weakend = self.isWeekend()
+    #print(is_weakend)
     scheduled = []
 
     for row in stop_times_df.itertuples():
-      if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id']==is_weakend:
+      if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id'] in is_weakend:
         #print(row)
         toPosix = self.toPOSIX(row.departure_time)
         if self.is_valid_stop_time(toPosix):
@@ -95,10 +96,14 @@ class FerryStationTimes:
     rt_feed = {}
     for entity in self.feed:
       rt_feed[entity['id']] = entity
-    
+    #print(rt_feed)
     #get differences
+    scheduled_filtered = []
     for schedule in scheduled:
       trip_id = str(schedule[0])
+      if trip_id not in rt_feed.keys():
+        print("Schedule not there", schedule)
+        continue
       entity = rt_feed[trip_id]
       if 'tripUpdate' in entity.keys():
         """
@@ -135,8 +140,9 @@ class FerryStationTimes:
 
         #fix the schedule if delay exists
         schedule[-1] += delay
+        scheduled_filtered.append(schedule)
     
-    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled)
+    self.stations[self.ROOSEVELTISLAND_STOP_ID]['ferry_times'].extend(scheduled_filtered)
 
     return self.stations
 
@@ -154,13 +160,16 @@ class FerryStationTimes:
         2: if today is a weekend. 
         1: if today is not a weekend.
     Values 1 and 2 corresponds the static trips.txt file.
+
+    ---Manual Fix Oct 2---
+    hard code weekend and weekday but keep previous logic
     """
     # Get the current date
     current_date = datetime.date.today()
     # Check if the day of the week is Saturday (5) or Sunday (6)
     if current_date.weekday() == 5 or current_date.weekday() == 6:
-        return 2
-    else: return 1
+        return [4,5]
+    else: return [1,2,3]
   
   @staticmethod
   def toPOSIX(input_time):
