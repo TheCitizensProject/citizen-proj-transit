@@ -179,14 +179,13 @@ class FerryStationTimes:
     # Your input time and date
     desired_timezone = "America/New_York"
     # Get the current date
-    current_date = datetime.datetime.now().date()
+    current_date = datetime.datetime.now(pytz.timezone(desired_timezone)).date()
+
     # Combine the current date and input time
     combined_datetime = datetime.datetime.combine(current_date, datetime.datetime.strptime(input_time, "%H:%M:%S").time())
-    # Convert the combined datetime to the desired timezone
-    timezone = pytz.timezone(desired_timezone)
-    combined_datetime_timezone_aware = timezone.localize(combined_datetime)
+
     # Convert the timezone-aware datetime to Unix timestamp
-    unix_timestamp = str(combined_datetime_timezone_aware.timestamp())
+    unix_timestamp = str(combined_datetime.timestamp())
     return unix_timestamp
 
   def is_valid_stop_time(self, str_posix_time):
