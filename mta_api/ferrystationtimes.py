@@ -70,12 +70,12 @@ class FerryStationTimes:
     """
     stop_times_df = self.stop_times_df
     is_weakend = self.isWeekend()
-    print(is_weakend)
+    #print(is_weakend)
     scheduled = []
 
     for row in stop_times_df.itertuples():
       if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id'] in is_weakend:
-        print(row)
+        #print(row)
         toPosix = self.toPOSIX(row.departure_time)
         if self.is_valid_stop_time(toPosix):
           #change from 12hr time to time difference
