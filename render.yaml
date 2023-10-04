@@ -6,4 +6,4 @@ services:
     plan: free
     autoDeploy: false
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app -b :8000
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT

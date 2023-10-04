@@ -35,10 +35,10 @@ Press Control+X, and press Y when prompted to save.
 
 Or you can just add a new file with the `.env` name, and paste the `MTA-KEY=your-mta-key`.
 
-5. Run the Flask app
+5. Run the Fast API app
 
 ```bash
-python3 app.py
+uvicorn app:app --reload
 ```
 
 6. Open your browser and paste the following endpoint:
