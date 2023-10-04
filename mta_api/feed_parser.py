@@ -25,8 +25,6 @@ class FeedParser:
     self.headers = {
       "x-api-key": os.getenv("MTA-KEY")
     }
-    self.mta_feed = self.get_mta_feed()
-    self.ferry_feed = self.get_ferry_feed()
 
 
   def get_mta_feed(self):
