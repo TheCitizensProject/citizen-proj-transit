@@ -2,6 +2,7 @@ from mta_api.stationtimes import StationTimes
 from mta_api.ferrystationtimes import FerryStationTimes
 from mta_api.stations import Stations
 from mta_api.tramstationtimes import TramStationTimes
+from mta_api.feed_parser import FeedParser
 import json
 import os
 from fastapi import FastAPI
@@ -32,7 +33,8 @@ def hello_world():
 
 @app.get("/api/get-station-time/{stop_id}")
 def get_station_time_by_id(stop_id:str):
-    stations = StationTimes().get_train_time_by_station()
+    feed = FeedParser().get_mta_feed()
+    stations = StationTimes(feed=feed).get_train_time_by_station()
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
     nBound.sort()
@@ -46,7 +48,8 @@ def get_station_time_by_id(stop_id:str):
 
 @app.get("/api/get-station-time-unified/{stop_id}")
 def get_station_time_by_id_unified(stop_id: str):
-    stations = StationTimes().get_train_time_by_station()
+    feed = FeedParser().get_mta_feed()
+    stations = StationTimes(feed=feed).get_train_time_by_station()
     toShow = 1 #number of trains to show per direction
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
@@ -82,8 +85,8 @@ def get_station_details():
 
 @app.get("/api/get-ferry-time")
 def get_ferry_times():
-
-    stations = FerryStationTimes().get_ferry_time_by_station()
+    feed = FeedParser().get_ferry_feed()
+    stations = FerryStationTimes(feed=feed).get_ferry_time_by_station()
     stop = stations[25]
     #sort the times
     stop['ferry_times'].sort(key=(lambda x: x[-1]))

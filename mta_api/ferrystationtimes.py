@@ -14,8 +14,8 @@ class FerryStationTimes:
   Update Sept 25th:
   - To fix implementation of ferry
   """
-  def __init__(self):
-    self.feed = FeedParser().ferry_feed
+  def __init__(self, feed:str):
+    self.feed = feed
     self.df_stations = FerryStations().make_df()
     self.stations =  self.get_stations()
     self.trips = FerryTrips().get_trips()
