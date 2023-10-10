@@ -1,12 +1,12 @@
 ﻿stop_id,stop_code,stop_name,stop_lat,stop_lon
 4,"2319806","Hunters Point South",40.741838,-73.961322
-8,"2319809","South Williamsburg",40.708570,-73.970169
+8,"2319809","South Williamsburg",40.708743,-73.970224
 11,"2319817","Atlantic Ave/BBP Pier 6",40.692315,-74.002073
 16,,"Beach Channel Dr/B. 108th St",40.583846,-73.831658
 17,"2319805","East 34th Street",40.743912,-73.970731
 18,"2319807","Greenpoint",40.731365,-73.963617
 19,"2319808","North Williamsburg",40.720838,-73.964902
-20,"2319810","Dumbo/Fulton Ferry",40.703540,-73.995763
+20,"2319810","Dumbo/Fulton Ferry",40.703652,-73.995671
 23,"2319815","Bay Ridge",40.639858,-74.038130
 24,"2319816","Red Hook/Atlantic Basin",40.680957,-74.013358
 25,"2319819","Roosevelt Island",40.756811,-73.952482
@@ -29,7 +29,7 @@
 84,,"Lexington Ave & East 37th St",40.748381,-73.978367
 85,,"East 34th St & Lexington Ave",40.746155,-73.979393
 86,,"East 34th Street Ferry Terminal",40.743676,-73.971676
-87,"2319811","Wall St/Pier 11",40.703052,-74.006057
+87,"2319811","Wall St/Pier 11",40.703161,-74.006144
 88,"2319813","Rockaway",40.584228,-73.831596
 89,"2319818","Astoria",40.771720,-73.935714
 90,"2319820","Long Island City",40.748420,-73.957725
@@ -44,12 +44,12 @@
 114,,"Stuyvesant Cove",40.731979,-73.972922
 115,,"Corlears Hook",40.710159,-73.979244
 118,"2319814","Sunset Park/BAT",40.646276,-74.026436
-120,,"Brooklyn Navy Yard",40.701917,-73.973617
+120,,"Brooklyn Navy Yard",40.701792,-73.973576
 131,,"Madison Ave & East 49th St",40.757237,-73.976045
 132,,"East 50th St & Lexington Ave",40.756510,-73.972374
 133,,"East 50th St & Madison Ave",40.757851,-73.975573
 136,,"Battery Park City/Vesey St.",40.715029,-74.017775
-137,,"St. George",40.646111,-74.074171
-138,,"Midtown West/W 39th St-Pier 79",40.760282,-74.004088
+137,,"St. George",40.646072,-74.074231
+138,,"Midtown West/W 39th St-Pier 79",40.760323,-74.004075
 141,,"Ferry Point Park",40.805455,-73.837305
 142,,"Rockaway Beach Boulevard/B. 102nd Street",40.583854,-73.823543

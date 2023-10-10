@@ -3,3 +3,5 @@ venv
 test.py
 __pycache__
 mta_api/__pycache__
+mta_api/__pycache__/stations.cpython-311.pyc
+mta_api/__pycache__/stationtimes.cpython-311.pyc

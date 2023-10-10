@@ -74,7 +74,7 @@ class FerryStationTimes:
     scheduled = []
 
     for row in stop_times_df.itertuples():
-      if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id'] in is_weakend:
+      if row.stop_id == self.ROOSEVELTISLAND_STOP_ID and self.trips[row.trip_id]['service_id'] == is_weakend:
         #print(row)
         toPosix = self.toPOSIX(row.departure_time)
         if self.is_valid_stop_time(toPosix):
@@ -168,8 +168,8 @@ class FerryStationTimes:
     current_date = datetime.date.today()
     # Check if the day of the week is Saturday (5) or Sunday (6)
     if current_date.weekday() == 5 or current_date.weekday() == 6:
-        return [4,5]
-    else: return [1,2,3]
+        return 2
+    else: return 1
   
   @staticmethod
   def toPOSIX(input_time):
