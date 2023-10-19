@@ -11,22 +11,23 @@ to extract train times for any of the subway stations within NYC.
 There are two ways you can get started. If you are considering to add/change code, follow instructions on Local Development. Otherwise, you
 can get started with Docker.
 
-### Local Development
-
 1. Clone the repository
 ```bash
 git clone https://github.com/farhan0167/citizen-proj-transit
 ```
-2. Create a virtual environment
+
+### Local Development
+
+1. Create a virtual environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
-3. Install the dependencies
+1. Install the dependencies
 ```bash
 pip install -r requirements.txt
 ```
-4. Get an MTA API Key from [MTA Dev](https://new.mta.info/developers)
+1. Get an MTA API Key from [MTA Dev](https://new.mta.info/developers)
 
 Once you obtain the key, you need to create a `.env` file within the root directory.
 ```bash
@@ -74,18 +75,18 @@ Open your browser and paste the following endpoint:
 
 #### Train
 ```
-https://localhost:8000/api/get-station-time-unified/B06
+http://localhost:8000/api/get-station-time-unified/B06
 ```
 This will return the train times for Roosevelt Island.
 #### Ferry
 ```
-https://localhost:8000/api/get-ferry-time
+http://localhost:8000/api/get-ferry-time
 ```
 This will return the ferry times for Roosevelt Island.
 #### Tram
 ```
-https://localhost:8000/api/get-tram-time
+http://localhost:8000/api/get-tram-time
 ```
 This will return the tram times for Roosevelt Island.
 
-You can also query `https://localhost:8000/docs` to access the FastAPI documentation and the interactive API.
+You can also query `http://localhost:8000/docs` to access the FastAPI documentation and the interactive API.
