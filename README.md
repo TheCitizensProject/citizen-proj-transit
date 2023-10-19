@@ -8,6 +8,11 @@ to extract train times for any of the subway stations within NYC.
 
 ## Getting Started
 
+There are two ways you can get started. If you are considering to add/change code, follow instructions on Local Development. Otherwise, you
+can get started with Docker.
+
+### Local Development
+
 1. Clone the repository
 ```bash
 git clone https://github.com/farhan0167/citizen-proj-transit
@@ -41,9 +46,46 @@ Or you can just add a new file with the `.env` name, and paste the `MTA-KEY=your
 uvicorn app:app --reload
 ```
 
-6. Open your browser and paste the following endpoint:
+### Docker
 
+1. Make sure to have Docker installed in your system. If you are using a Mac, you can simply download [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+2. Get an MTA API Key from [MTA Dev](https://new.mta.info/developers)
+
+Once you obtain the key, you need to create a `.env` file within the root directory.
+```bash
+nano .env
 ```
-https://localhost:8000/api/get-station-time/B06
+with the text editor open, paste the following:
+```bash
+MTA-KEY=your-mta-key
+```
+Press Control+X, and press Y when prompted to save.
+
+Or you can just add a new file with the `.env` name, and paste the `MTA-KEY=your-mta-key`.
+
+3. With Docker Desktop running in the background, run the following command:
+   ```bash
+   sudo docker compose build
+   docker compose up -d
+   ```
+
+### Interacting with the API
+Open your browser and paste the following endpoint:
+
+#### Train
+```
+https://localhost:8000/api/get-station-time-unified/B06
 ```
 This will return the train times for Roosevelt Island.
+#### Ferry
+```
+https://localhost:8000/api/get-ferry-time
+```
+This will return the ferry times for Roosevelt Island.
+#### Tram
+```
+https://localhost:8000/api/get-tram-time
+```
+This will return the tram times for Roosevelt Island.
+
+You can also query `https://localhost:8000/docs` to access the FastAPI documentation and the interactive API.
