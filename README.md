@@ -13,7 +13,7 @@ can get started with Docker.
 
 1. Clone the repository
 ```bash
-git clone https://github.com/farhan0167/citizen-proj-transit
+git clone https://github.com/TheCitizensProject/citizen-proj-transit.git
 ```
 
 ### Local Development
