@@ -1,9 +1,0 @@
-services:
-  # A Docker web service
-  - type: web
-    name: test-server-mta-api
-    runtime: python
-    plan: free
-    autoDeploy: false
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app -b :8000

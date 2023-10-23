@@ -7,8 +7,8 @@ class StationTimes:
   StationTimes inherits from the Stations Class and inserts train times in the north and south
   bound platforms from parsed GTFS feed.
   """
-  def __init__(self):
-    self.feed = FeedParser().mta_feed
+  def __init__(self, feed:str):
+    self.feed = feed
     self.df_stations = Stations().make_df()
     self.stations =  self.get_stations()
 

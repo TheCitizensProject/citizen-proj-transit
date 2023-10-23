@@ -1,36 +1,55 @@
-from flask import Flask, jsonify
 from mta_api.stationtimes import StationTimes
 from mta_api.ferrystationtimes import FerryStationTimes
 from mta_api.stations import Stations
 from mta_api.tramstationtimes import TramStationTimes
+from mta_api.feed_parser import FeedParser
 import json
-from flask_cors import CORS
 import os
+from fastapi import FastAPI
+import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
+import api_docs.documentation as doc
 
-app = Flask(__name__)
-CORS(app)
+app = FastAPI(
+    title=doc.title(),
+    description = doc.description(),
+    version="2.0.0",
+    contact = doc.contact()
+)
 
-@app.route("/")
+origins = ["*",]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/")
 def hello_world():
     return "<p>Hello, World!</p>"
 
-@app.route("/api/get-station-time/<stop_id>")
-def get_station_time_by_id(stop_id):
-    stations = StationTimes().get_train_time_by_station()
+@app.get("/api/get-station-time/{stop_id}")
+def get_station_time_by_id(stop_id:str):
+    feed = FeedParser().get_mta_feed()
+    stations = StationTimes(feed=feed).get_train_time_by_station()
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
     nBound.sort()
     sBound = stop['south_bound_trains']
     sBound.sort()
 
-    return jsonify({
+    return {
         'statusCode': 200,
         'data': stop
-    })
+    }
 
-@app.route("/api/get-station-time-unified/<stop_id>")
-def get_station_time_by_id_unified(stop_id):
-    stations = StationTimes().get_train_time_by_station()
+@app.get("/api/get-station-time-unified/{stop_id}")
+def get_station_time_by_id_unified(stop_id: str):
+    feed = FeedParser().get_mta_feed()
+    stations = StationTimes(feed=feed).get_train_time_by_station()
     toShow = 1 #number of trains to show per direction
     stop = stations[stop_id]
     nBound = stop['north_bound_trains']
@@ -54,20 +73,20 @@ def get_station_time_by_id_unified(stop_id):
 
     stop['both_directions'] = both_directions
 
-    return jsonify({
+    return {
         'statusCode': 200,
         'data': stop
-    })
+    }
 
-@app.route("/api/get-station-details")
+@app.get("/api/get-station-details")
 def get_station_details():
     stations = Stations().stations
-    return jsonify(stations)
+    #return jsonify(stations)
 
-@app.route("/api/get-ferry-time")
+@app.get("/api/get-ferry-time")
 def get_ferry_times():
-
-    stations = FerryStationTimes().get_ferry_time_by_station()
+    feed = FeedParser().get_ferry_feed()
+    stations = FerryStationTimes(feed=feed).get_ferry_time_by_station()
     stop = stations[25]
     #sort the times
     stop['ferry_times'].sort(key=(lambda x: x[-1]))
@@ -84,12 +103,12 @@ def get_ferry_times():
     stop['ferry_times'] = stop['ferry_times'][:toShow]
 
 
-    return jsonify({
+    return {
         'statusCode': 200,
         'data': stop
-    })
+    }
 
-@app.route("/api/get-tram-time")
+@app.get("/api/get-tram-time")
 def get_tram_times():
 
     stations = TramStationTimes().get_tram_time_by_station()
@@ -100,10 +119,10 @@ def get_tram_times():
     toShow = 2
     stop['tram_times'] = stop['tram_times'][:toShow]
 
-    return jsonify({
+    return {
         'statusCode': 200,
         'data': stop
-    })
+    }
 
 if __name__ == "__main__":
-    app.run(host="localhost", port=8000, debug=True)
+    uvicorn.run(app, host="localhost", port=8000)
