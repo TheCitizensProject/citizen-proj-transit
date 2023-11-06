@@ -1,0 +1,493 @@
+﻿route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+1,car1_Standard,car1_Standard_toM_060000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_061500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_063000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_064500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_070000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_071500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_073000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_074500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_080000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_081500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_083000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_084500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_090000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_091500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_093000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_094500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_100000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_101500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_103000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_104500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_110000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_111500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_113000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_114500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_120000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_121500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_123000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_124500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_130000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_131500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_133000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_134500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_140000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_141500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_143000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_144500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_150000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_151500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_153000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_154500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_160000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_161500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_163000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_164500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_170000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_171500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_173000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_174500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_180000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_181500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_183000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_184500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_190000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_191500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_193000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_194500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_200000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_201500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_203000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_204500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_210000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_211500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_213000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_214500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_220000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_221500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_223000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_224500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_230000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_231500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_233000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_234500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_240000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_241500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_243000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_244500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_250000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_251500,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_253000,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toM_254500,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_260000,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_261500,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_263000,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_264500,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_270000,Manhattan,0,,Tram_toM,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toM_271500,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_070730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_072230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_073730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_075230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_080730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_082230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_083730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_085230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_090730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_092230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_093730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_095230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_150730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_152230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_153730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_155230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_160730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_162230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_163730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_165230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_170730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_172230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_173730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_175230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_180730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_182230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_183730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_185230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_190730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_192230,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_193730,Manhattan,0,,Tram_toM,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toM_195230,Manhattan,0,,Tram_toM,1,1
+1,car1_Standard,car1_Standard_toRI_060730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_062230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_063730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_065230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_070730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_072230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_073730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_075230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_080730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_082230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_083730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_085230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_090730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_092230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_093730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_095230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_100730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_102230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_103730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_105230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_110730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_112230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_113730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_115230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_120730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_122230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_123730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_125230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_130730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_132230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_133730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_135230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_140730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_142230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_143730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_145230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_150730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_152230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_153730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_155230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_160730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_162230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_163730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_165230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_170730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_172230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_173730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_175230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_180730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_182230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_183730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_185230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_190730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_192230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_193730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_195230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_200730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_202230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_203730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_205230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_210730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_212230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_213730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_215230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_220730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_222230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_223730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_225230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_230730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_232230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_233730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_235230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_240730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_242230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_243730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_245230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_250730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_252230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_253730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Standard,car1_Standard_toRI_255230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_260730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_262230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_263730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_265230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_270730,Roosevelt Island,1,,Tram_toRI,1,1
+1,car1_Fri-Sat_Extension,car1_Fri-Sat_Extension_toRI_272230,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_070000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_071500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_073000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_074500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_080000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_081500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_083000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_084500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_090000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_091500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_093000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_094500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_150000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_151500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_153000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_154500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_160000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_161500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_163000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_164500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_170000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_171500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_173000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_174500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_180000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_181500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_183000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_184500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_190000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_191500,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_193000,Roosevelt Island,1,,Tram_toRI,1,1
+1,car2_Mon-Fri_Rush,car2_Mon-Fri_Rush_toRI_194500,Roosevelt Island,1,,Tram_toRI,1,1
+2,Bus_Standard,Northbound_Standard_T01,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T02,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T03,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T04,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T05,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T06,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T07,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T08,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T09,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T10,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T11,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T12,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T13,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T14,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T15,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T16,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T17,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T18,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T19,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T20,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T21,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T22,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T23,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T24,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T25,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T26,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T27,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T28,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T29,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T30,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T31,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T32,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T33,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T34,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T35,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T36,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T37,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T38,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T39,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T40,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T41,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T42,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T43,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T44,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T45,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T46,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T47,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T48,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T49,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T50,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T51,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T52,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T53,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T54,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T55,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T56,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T57,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T58,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T59,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T60,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T61,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T62,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T63,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T64,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T65,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T66,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T67,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T68,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T69,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T70,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T71,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T72,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T73,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T74,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T75,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T76,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T77,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T78,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T79,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T80,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T81,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T82,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T83,Northbound,0,,Northbound,1,
+2,Bus_Standard,Northbound_Standard_T84,Northbound,0,,Northbound,1,
+2,Bus_Fri-Sat_Extension,Northbound_Weekend_Extension_T01,Northbound,0,,Northbound,1,
+2,Bus_Fri-Sat_Extension,Northbound_Weekend_Extension_T02,Northbound,0,,Northbound,1,
+2,Bus_Fri-Sat_Extension,Northbound_Weekend_Extension_T03,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T01,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T02,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T03,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T04,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T05,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T06,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T07,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T08,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T09,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T10,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T11,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T12,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T13,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T14,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T15,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T16,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T17,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T18,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T19,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T20,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T21,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T22,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T23,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T24,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T25,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T26,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T27,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T28,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T29,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T30,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T31,Northbound,0,,Northbound,1,
+2,Bus_Rush,Northbound_Rush_T32,Northbound,0,,Northbound,1,
+2,Bus_Standard,Southbound_Standard_T01,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T02,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T03,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T04,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T05,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T06,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T07,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T08,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T09,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T10,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T11,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T12,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T13,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T14,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T15,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T16,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T17,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T18,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T19,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T20,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T21,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T22,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T23,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T24,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T25,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T26,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T27,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T28,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T29,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T30,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T31,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T32,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T33,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T34,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T35,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T36,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T37,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T38,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T39,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T40,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T41,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T42,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T43,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T44,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T45,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T46,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T47,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T48,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T49,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T50,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T51,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T52,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T53,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T54,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T55,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T56,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T57,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T58,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T59,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T60,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T61,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T62,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T63,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T64,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T65,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T66,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T67,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T68,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T69,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T70,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T71,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T72,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T73,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T74,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T75,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T76,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T77,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T78,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T79,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T80,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T81,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T82,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T83,Southbound,0,,Southbound,1,
+2,Bus_Standard,Southbound_Standard_T84,Southbound,0,,Southbound,1,
+2,Bus_Fri-Sat_Extension,Southbound_Weekend_Extension_T01,Southbound,0,,Southbound,1,
+2,Bus_Fri-Sat_Extension,Southbound_Weekend_Extension_T02,Southbound,0,,Southbound,1,
+2,Bus_Fri-Sat_Extension,Southbound_Weekend_Extension_T03,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T01,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T02,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T03,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T04,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T05,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T06,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T07,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T08,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T09,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T10,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T11,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T12,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T13,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T14,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T15,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T16,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T17,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T18,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T19,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T20,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T21,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T22,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T23,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T24,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T25,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T26,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T27,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T28,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T29,Southbound,0,,Southbound,1,
+2,Bus_Rush,Southbound_Rush_T30,Southbound,0,,Southbound,1,
+3,Octagon,Octagon_Northbound_T01,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T02,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T03,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T04,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T05,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T06,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T07,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T08,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T09,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Northbound_T10,Northbound,0,,Octagon_North,1,
+3,Octagon,Octagon_Southbound_T01,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T02,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T03,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T04,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T05,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T06,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T07,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T08,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T09,Southbound,0,,Octagon_South,1,
+3,Octagon,Octagon_Southbound_T10,Southbound,0,,Octagon_South,1,

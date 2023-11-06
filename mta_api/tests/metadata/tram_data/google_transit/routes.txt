@@ -1,0 +1,4 @@
+﻿route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order,continuous_pickup,continuous_drop_off
+1,RIOC,Tram,,"Trams operate between Roosevelt Island and Manhattan East 59th Street and Second Avenue every 7-15 minutes from 6am to 2am Sunday through Thursday, and 6am to 3:30am Friday and Saturday.",6,http://rioc.ny.gov/302/Tram,,,,,
+2,RIOC,,Red Bus,"Free busses operate between Southpoint Park and the Octagon every 7-15 minutes from 6am to 2am Sunday through Thursday, and 6am to 3:30am Friday and Saturday.",3,https://ny-rioc.civicplus.com/368/Red-Bus-Schedule,,,,,
+3,RIOC,,Octagon Express,Free express busses operate between the Octagon and the tram / subway every 20 minutes during weekday morning rush hours.,3,https://ny-rioc.civicplus.com/368/Red-Bus-Schedule,,,,,

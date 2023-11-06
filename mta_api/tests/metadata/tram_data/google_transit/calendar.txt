@@ -1,0 +1,8 @@
+﻿service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+car1_Standard,1,1,1,1,1,1,1,20211201,20240101
+car1_Fri-Sat_Extension,0,0,0,0,1,1,0,20211201,20240101
+car2_Mon-Fri_Rush,1,1,1,1,1,0,0,20220206,20240101
+Bus_Standard,1,1,1,1,1,1,1,20211201,20240101
+Bus_Fri-Sat_Extension,0,0,0,0,1,1,0,20211201,20240101
+Bus_Rush,1,1,1,1,1,0,0,20211201,20240101
+Octagon,1,1,1,1,1,0,0,20211201,20240101

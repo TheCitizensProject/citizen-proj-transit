@@ -7,10 +7,11 @@ class StationTimes:
   StationTimes inherits from the Stations Class and inserts train times in the north and south
   bound platforms from parsed GTFS feed.
   """
-  def __init__(self, feed:str):
+  def __init__(self, feed:str, testing:bool=False):
     self.feed = feed
     self.df_stations = Stations().make_df()
     self.stations =  self.get_stations()
+    self.testing = testing
 
   #Set a time threshold in seconds for how far into future we'll display incoming trains.
   MINUTES_IN_FUTURE = 80
@@ -94,8 +95,10 @@ class StationTimes:
 
 
 
-  @staticmethod
-  def get_time_difference(str_posix_time):
+
+  def get_time_difference(self, str_posix_time):
     """Return time difference between current time and train arrival/departure time in seconds"""
+    if self.testing:
+        return float(str_posix_time) - 1699296779.2250688
     return float(str_posix_time) - time.time()
 
