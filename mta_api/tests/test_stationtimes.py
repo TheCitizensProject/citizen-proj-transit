@@ -6,7 +6,7 @@ with open('sample_mta_rt_gtfs.json', 'r') as f:
     # Reading from json file
     feed = json.load(f)
 
-def test_get_station_time_by_id_unified():
+def test_get_station_time_by_id():
     stop_id = "B06"
     stations = StationTimes(feed=feed, testing=True).get_train_time_by_station()
     stop = stations[stop_id]
