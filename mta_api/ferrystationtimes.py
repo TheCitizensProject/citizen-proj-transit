@@ -14,13 +14,14 @@ class FerryStationTimes:
   Update Sept 25th:
   - To fix implementation of ferry
   """
-  def __init__(self, feed:str):
+  def __init__(self, feed:str, testing:bool=False):
     self.feed = feed
     self.df_stations = FerryStations().make_df()
     self.stations =  self.get_stations()
     self.trips = FerryTrips().get_trips()
     self.stop_times_df = pd.read_csv('metadata/ferry_data/google_transit/stop_times.txt')
     self.static_times = self.get_static_timetable()
+    self.testing = testing
     
 
   TIME_THRESHOLD = 60*60 #1m*30 = 30m
@@ -103,6 +104,8 @@ class FerryStationTimes:
       trip_id = str(schedule[0])
       if trip_id not in rt_feed.keys():
         print("Schedule not there", schedule)
+        if self.testing:
+          return "A data point in schedule does not match what the RT feed has. Check the static files to see if data has changed"
         continue
       entity = rt_feed[trip_id]
       if 'tripUpdate' in entity.keys():

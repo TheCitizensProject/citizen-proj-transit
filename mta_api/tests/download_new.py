@@ -21,7 +21,7 @@ else:
         "tram_data": "http://rapid.nationalrtap.org/GTFSFileManagement/UserUploadFiles/7707/gtfs.zip"
     }
 
-
+    #download ferry and tram static files:
     for data_dir, url in data_files.items():
         filename = f"metadata/{data_dir}/data.zip"
         response = requests.get(url)
@@ -41,6 +41,19 @@ else:
 
         print(f"Unzipped {zip_file} to {output_folder}")
     
+    #download MTA Stations.csv file:
+    filename = f"metadata/Stations.csv"
+    url = "https://atisdata.s3.amazonaws.com/Station/Stations.csv"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+        print(f"Downloaded {filename}")
+    else:
+        print(f"Failed to download the file. Status code: {response.status_code}")
+    
+    #put a timestamp tag in the new file to keep track
     today = datetime.datetime.now()
     tag = f"Data version {today}"
 
