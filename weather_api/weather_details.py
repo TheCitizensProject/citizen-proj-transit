@@ -10,8 +10,9 @@ class WeatherDetails:
         }
 
     def get_weather_details(self):
+        print("inside get weather details function")
         url=self.weather_api_endpoint + self.headers["weather-api-key"] + '&q=Roosevelt'
-        print(url)
+        print("URL:- ",url)
         response = requests.get(url)
         data=response.json()
         weather_data={

@@ -129,7 +129,7 @@ def get_tram_times():
 def get_weather_data():
     wd=WeatherDetails()
     data=wd.get_weather_details()
-    print("data in app.py  ",data)
+    print("data in app.py  ")
     return {
         'data': data
     }
