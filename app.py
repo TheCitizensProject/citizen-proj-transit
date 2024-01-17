@@ -9,6 +9,7 @@ from fastapi import FastAPI
 import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 import api_docs.documentation as doc
+from weather_api.weather_details import WeatherDetails
 
 app = FastAPI(
     title=doc.title(),
@@ -122,6 +123,15 @@ def get_tram_times():
     return {
         'statusCode': 200,
         'data': stop
+    }
+
+@app.get("/api/get-weather-data")
+def get_weather_data():
+    wd=WeatherDetails()
+    data=wd.get_weather_details()
+    print("data in app.py  ",data)
+    return {
+        'data': data
     }
 
 if __name__ == "__main__":
