@@ -96,7 +96,7 @@ class FerryStationTimes:
     rt_feed = {}
     for entity in self.feed:
       rt_feed[entity['id']] = entity
-    #print(rt_feed)
+    # print(rt_feed)
     #get differences
     scheduled_filtered = []
     for schedule in scheduled:
@@ -147,6 +147,40 @@ class FerryStationTimes:
     return self.stations
 
 
+  def parse_stops(self, stop):
+    #sort the times
+    stop['ferry_times'].sort(key=(lambda x: x[-1]))
+
+    removeUntil = -1 #init removeUntil
+    #don't show negative departures
+    for i in range(len(stop['ferry_times'])):
+        if stop['ferry_times'][i][-1] < 0:
+            removeUntil = i
+    
+    stop['ferry_times'] = stop['ferry_times'][removeUntil+1:]
+    #display only 2 ferries
+    toShow = 2
+    stop['ferry_times'] = stop['ferry_times'][:toShow]
+
+  def get_static_schedule(self, stop):
+    scheduled = self.get_schedule()
+    unique_destinations = {}
+
+    for route in scheduled:
+      if route[-1] < 0:  # skip if the last element is negative
+        continue
+
+      destination = route[1]
+      if destination not in unique_destinations and self.is_active(self, destination):
+        unique_destinations[destination] = route
+
+      # Exit the loop early when we have found two unique routes
+      if len(unique_destinations) == 2:
+        break
+
+    stop['ferry_times_static'] = list(unique_destinations.values())
+    
+    
   @staticmethod
   def get_time_difference(str_posix_time):
     """Return time difference between current time and train arrival/departure time in seconds"""
@@ -202,3 +236,41 @@ class FerryStationTimes:
     time_obj = datetime.datetime.strptime(input_time, '%H:%M:%S')
     formatted_time = time_obj.strftime('%I:%M:%S %p')
     return formatted_time
+
+  @staticmethod
+  def is_active(self, destination):
+    """
+    Check if a ferry to a given destination is currently active based on the current time and 
+    weekday, using a dictionary to store the ferry schedule times for each destination. Returns 
+    False if the destination is not in the schedule.
+
+    Using the most recent Winter schedule
+    https://images.ferry.nyc/wp-content/uploads/2018/03/04020153/2023_winter_astoria.pdf
+    to populate ferry_static_ref dictionary. 
+    
+    NOTE: This will need to be updated in the future, when the ferry schedule changes, or 
+    when we update the zipped schedule with an updated schedule. 
+    (https://www.ferry.nyc/developer-tools/)
+    """
+    ferry_static_schedule = {
+      'East 90th St': {
+        'weekday': ['07:02:00', '20:58:00'],
+        'weekend': ['09:40:00', '20:07:00'],
+      },
+      'Wall St./Pier 11': {
+        'weekday': ['06:17:00', '20:32:00'],
+        'weekend': ['09:14:00', '19:41:00'],
+      },
+    }
+
+    # Get the current local time
+    current_time = datetime.datetime.now().time()
+    is_weekend = self.isWeekend() == 2
+    # Check if the destination is active
+    if destination in ferry_static_schedule:
+        schedule = ferry_static_schedule[destination]['weekend'] if is_weekend else ferry_static_schedule[destination]['weekday']
+        start_time = datetime.datetime.strptime(schedule[0], "%H:%M:%S").time()
+        end_time = datetime.datetime.strptime(schedule[1], "%H:%M:%S").time()
+        return start_time <= current_time <= end_time
+    else:
+        return False
