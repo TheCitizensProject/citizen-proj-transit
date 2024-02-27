@@ -88,7 +88,18 @@ def get_station_details():
 def get_ferry_times():
     feed = FeedParser().get_ferry_feed()
     ferry_station_times = FerryStationTimes(feed=feed)
-    stations = ferry_station_times.get_ferry_time_by_station()
+    try:
+        stations = ferry_station_times.get_ferry_time_by_station()
+    except:
+        stations = {
+            25: {
+                'gtfs_stop_id': 25, 
+                'station_name': 'Roosevelt Island', 
+                'geo-loc': {'latitude': 40.756811, 'longitude': -73.952482}, 
+                'ferry_times': []
+            }
+        }
+
     stop = stations[25]
 
     if 'ferry_times' in stop.keys() and len(stop['ferry_times']) > 0:
