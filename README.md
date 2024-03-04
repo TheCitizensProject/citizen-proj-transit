@@ -82,6 +82,12 @@ This will return the train times for Roosevelt Island.
 http://localhost:8000/api/get-ferry-time
 ```
 This will return the ferry times for Roosevelt Island.
+
+>__Note__: The schedules are always changing. We need to keep an eye for any updates they have on their schedule posted on their website (https://www.ferry.nyc/routes-and-schedules/route/astoria/).
+>
+>
+>Whenever we notice that the schedule has updated (ie to a summer schedule) update the files located at `/metadata/ferry_data/*`. We need to also double check the `ferry_static_ref` dictionary and update the start and end times if necessary on `/mta_api/ferrystationtimes.py::256-265`
+
 #### Tram
 ```
 http://localhost:8000/api/get-tram-time

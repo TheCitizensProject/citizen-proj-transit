@@ -87,22 +87,25 @@ def get_station_details():
 @app.get("/api/get-ferry-time")
 def get_ferry_times():
     feed = FeedParser().get_ferry_feed()
-    stations = FerryStationTimes(feed=feed).get_ferry_time_by_station()
+    ferry_station_times = FerryStationTimes(feed=feed)
+    try:
+        stations = ferry_station_times.get_ferry_time_by_station()
+    except:
+        stations = {
+            25: {
+                'gtfs_stop_id': 25, 
+                'station_name': 'Roosevelt Island', 
+                'geo-loc': {'latitude': 40.756811, 'longitude': -73.952482}, 
+                'ferry_times': []
+            }
+        }
+
     stop = stations[25]
-    #sort the times
-    stop['ferry_times'].sort(key=(lambda x: x[-1]))
 
-    removeUntil = -1 #init removeUntil
-    #don't show negative departures
-    for i in range(len(stop['ferry_times'])):
-        if stop['ferry_times'][i][-1] < 0:
-            removeUntil = i
-    
-    stop['ferry_times'] = stop['ferry_times'][removeUntil+1:]
-    #display only 2 ferries
-    toShow = 2
-    stop['ferry_times'] = stop['ferry_times'][:toShow]
-
+    if 'ferry_times' in stop.keys() and len(stop['ferry_times']) > 0:
+        ferry_station_times.parse_stops(stop)
+    else:
+        ferry_station_times.get_static_schedule(stop)
 
     return {
         'statusCode': 200,

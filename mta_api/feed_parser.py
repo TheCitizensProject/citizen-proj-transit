@@ -40,12 +40,17 @@ class FeedParser:
   
   def get_ferry_feed(self):
     url = self.ferry_endpoint
-    feed = gtfs_realtime_pb2.FeedMessage()
-    response = requests.get(url)
-    feed.ParseFromString(response.content)
-    feed = MessageToDict(feed)['entity']
+    
+    try: 
+      response = requests.get(url)
+      feed = gtfs_realtime_pb2.FeedMessage()
+      feed.ParseFromString(response.content)
+      feed = MessageToDict(feed)['entity']
 
-    return feed
+      return feed
+    except:
+      print("Failed to fetch and parse ferry feed")
+      return []
 
 
 
